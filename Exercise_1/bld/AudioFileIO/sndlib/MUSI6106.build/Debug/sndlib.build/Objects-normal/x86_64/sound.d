@@ -1,0 +1,9 @@
+dependencies: \
+  /Users/liuhanyu1030/Documents/audiosoftware/2018-MUSI6106/Exercise_1/3rdparty/sndlib/sound.c \
+  /Users/liuhanyu1030/Documents/audiosoftware/2018-MUSI6106/Exercise_1/3rdparty/sndlib/mus-config.h \
+  /Users/liuhanyu1030/Documents/audiosoftware/2018-MUSI6106/Exercise_1/3rdparty/sndlib/unix-config.h \
+  /Users/liuhanyu1030/Documents/audiosoftware/2018-MUSI6106/Exercise_1/3rdparty/sndlib/_sndlib.h \
+  /Users/liuhanyu1030/Documents/audiosoftware/2018-MUSI6106/Exercise_1/3rdparty/sndlib/sndlib.h \
+  /Users/liuhanyu1030/Documents/audiosoftware/2018-MUSI6106/Exercise_1/3rdparty/sndlib/xen.h \
+  /Users/liuhanyu1030/Documents/audiosoftware/2018-MUSI6106/Exercise_1/3rdparty/sndlib/vct.h \
+  /Users/liuhanyu1030/Documents/audiosoftware/2018-MUSI6106/Exercise_1/3rdparty/sndlib/sndlib-strings.h
