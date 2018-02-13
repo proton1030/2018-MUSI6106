@@ -26,6 +26,8 @@
 *.exe
 *.out
 *.app
+bld/
+bin/
 /bld
 /bin
 *.bak
