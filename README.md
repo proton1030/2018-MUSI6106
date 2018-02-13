@@ -7,4 +7,6 @@ This repo is dedicated to keeping the C++ implementations for homeworks and exer
 ### Contents
 
 - Exercise 1: Get familiar with C++ and an audio interface class.
-- Homework 1: Implement Ring Buffer
+- Exercise 2: Implement Ring Buffer get() using float offset.
+- Homework 1: Implement Ring Buffer.
+- Homework 2: Implement FIR and IIR Comb Filter using Ring Buffer class.

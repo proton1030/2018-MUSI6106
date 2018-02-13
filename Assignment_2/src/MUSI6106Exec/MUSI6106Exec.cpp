@@ -39,7 +39,6 @@ int main(int argc, char* argv[])
     CAudioFileIf            *phAudioOutputFile = 0;
     
     CAudioFileIf::FileSpec_t stFileSpec;
-    CAudioFileIf::FileSpec_t stOutputFileSpec;
 
     CCombFilterIf           *pInstance = 0;
     CCombFilterIf::create(pInstance);
@@ -71,15 +70,9 @@ int main(int argc, char* argv[])
     CAudioFileIf::create(phAudioFile);
     CAudioFileIf::create(phAudioOutputFile);
     
-    //*************************REQUIRES IMPROVEMENTS*************************
-    phAudioFile->getFileSpec(stFileSpec);
-    stOutputFileSpec = stFileSpec;
-    stOutputFileSpec.eFormat = CAudioFileIf::FileFormat_t::kFileFormatWav; // The problem is that the getFileSpec in line 73 didn't get correct specs of the audio.
-    stOutputFileSpec.fSampleRateInHz = 44100.0f; //Or else we can straight pass argument to the openFile down below.
-    //*************************
-    
     phAudioFile->openFile(sInputFilePath, CAudioFileIf::kFileRead);
-    phAudioOutputFile->openFile(sOutputFilePath, CAudioFileIf::kFileWrite, &stOutputFileSpec);
+    phAudioFile->getFileSpec(stFileSpec);
+    phAudioOutputFile->openFile(sOutputFilePath, CAudioFileIf::kFileWrite, &stFileSpec);
     
     if (!phAudioFile->isOpen())
     {
@@ -94,7 +87,7 @@ int main(int argc, char* argv[])
     
     //////////////////////////////////////////////////////////////////////////////
     // Init Comb Filter
-    pInstance->init((iFilterType ? CCombFilterIf::CombFilterType_t::kCombIIR : CCombFilterIf::CombFilterType_t::kCombFIR), fMaxFilterDelayTime, stOutputFileSpec.fSampleRateInHz, stOutputFileSpec.iNumChannels);
+    pInstance->init((iFilterType ? CCombFilterIf::CombFilterType_t::kCombIIR : CCombFilterIf::CombFilterType_t::kCombFIR), fMaxFilterDelayTime, stFileSpec.fSampleRateInHz, stFileSpec.iNumChannels);
 
     //////////////////////////////////////////////////////////////////////////////
     // allocate memory
