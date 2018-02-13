@@ -12,6 +12,10 @@
 #include "CombFilterIf.h"
 #include "CombFilter.h"
 
+#define MIN_DELAY_TIME_IN_FRAMES 1.0f
+#define MIN_IIR_GAIN -1.0f
+#define MAX_IIR_GAIN 1.0f
+
 
 CCombFilterBase::CCombFilterBase( int iMaxDelayInFrames, int iNumChannels ) :
     m_ppCRingBuffer(0),
@@ -23,7 +27,7 @@ CCombFilterBase::CCombFilterBase( int iMaxDelayInFrames, int iNumChannels ) :
     // Parameter range set for FIR filters
     CCombFilterBase::m_aafParamRange[0][0] = std::numeric_limits<float>::min();
     CCombFilterBase::m_aafParamRange[0][1] = std::numeric_limits<float>::max();
-    CCombFilterBase::m_aafParamRange[1][0] = 1.0f;
+    CCombFilterBase::m_aafParamRange[1][0] = MIN_DELAY_TIME_IN_FRAMES;
     CCombFilterBase::m_aafParamRange[1][1] = iMaxDelayInFrames;
     
     // Allocate memory for ring buffer
@@ -110,8 +114,8 @@ Error_t CCombFilterFir::process( float **ppfInputBuffer, float **ppfOutputBuffer
 
 CCombFilterIir::CCombFilterIir (int iMaxDelayInFrames, int iNumChannels) : CCombFilterBase(iMaxDelayInFrames, iNumChannels)
 {
-    CCombFilterBase::m_aafParamRange[0][0] = -1.0f;
-    CCombFilterBase::m_aafParamRange[0][1] = 1.0f;
+    CCombFilterBase::m_aafParamRange[0][0] = MIN_IIR_GAIN;
+    CCombFilterBase::m_aafParamRange[0][1] = MAX_IIR_GAIN;
 }
 
 Error_t CCombFilterIir::process( float **ppfInputBuffer, float **ppfOutputBuffer, int iNumberOfFrames )
