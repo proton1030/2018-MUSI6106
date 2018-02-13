@@ -42,9 +42,10 @@ CCombFilterBase::CCombFilterBase( int iMaxDelayInFrames, int iNumChannels ) :
 CCombFilterBase::~CCombFilterBase()
 {
     // Deallocating memory to avoid memory leak
+    
     for(int i = 0; i < m_iNumChannels; i++)
     {
-        delete [] m_ppCRingBuffer[i];
+        delete m_ppCRingBuffer[i];
     }
     delete [] m_ppCRingBuffer;
     m_ppCRingBuffer = 0;

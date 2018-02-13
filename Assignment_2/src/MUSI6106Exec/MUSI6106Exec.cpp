@@ -133,7 +133,8 @@ int main(int argc, char* argv[])
     // clean-up
     CAudioFileIf::destroy(phAudioFile);
     CAudioFileIf::destroy(phAudioOutputFile);
-
+    CCombFilterIf::destroy(pInstance);
+    
     for (int i = 0; i < stFileSpec.iNumChannels; i++)
     {
         delete[] ppfAudioData[i];
