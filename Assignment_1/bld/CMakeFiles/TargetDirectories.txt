@@ -1,0 +1,5 @@
+/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/CMakeFiles/ALL_BUILD.dir
+/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/CMakeFiles/ZERO_CHECK.dir
+/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/MUSI6106Exec/CMakeFiles/MUSI6106Exec.dir
+/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/AudioFileIO/CMakeFiles/AudioFileIO.dir
+/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/AudioFileIO/sndlib/CMakeFiles/sndlib.dir

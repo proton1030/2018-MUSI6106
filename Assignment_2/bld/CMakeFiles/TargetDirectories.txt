@@ -1,0 +1,14 @@
+/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_2/bld/CMakeFiles/RUN_TESTS.dir
+/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_2/bld/CMakeFiles/ALL_BUILD.dir
+/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_2/bld/CMakeFiles/ZERO_CHECK.dir
+/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_2/bld/MUSI6106Exec/CMakeFiles/RUN_TESTS.dir
+/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_2/bld/MUSI6106Exec/CMakeFiles/MUSI6106Exec.dir
+/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_2/bld/AudioFileIO/CMakeFiles/RUN_TESTS.dir
+/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_2/bld/AudioFileIO/CMakeFiles/AudioFileIO.dir
+/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_2/bld/AudioFileIO/sndlib/CMakeFiles/RUN_TESTS.dir
+/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_2/bld/AudioFileIO/sndlib/CMakeFiles/sndlib.dir
+/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_2/bld/CombFilter/CMakeFiles/RUN_TESTS.dir
+/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_2/bld/CombFilter/CMakeFiles/CombFilter.dir
+/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_2/bld/TestExec/CMakeFiles/RUN_TESTS.dir
+/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_2/bld/TestExec/CMakeFiles/TestExec.dir
+/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_2/bld/TestExec/CMakeFiles/UnitTest++.dir

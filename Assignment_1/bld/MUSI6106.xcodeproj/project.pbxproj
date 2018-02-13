@@ -1,0 +1,1189 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		16512C9322CB4CAABBE385D3 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C3C676285CFB43FC88E46DB2 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				26835CC11D3B472999279012 /* CMake Rules */,
+			);
+			dependencies = (
+				61B8FEBFDBF143539816874B /* PBXTargetDependency */,
+				14105F2CE7954D51905FCE27 /* PBXTargetDependency */,
+				4CBCCEA0A60543D6A6274028 /* PBXTargetDependency */,
+				77E3BA9F90D141B1851595AE /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		4077B56FC79F49148BFFE397 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B8DDBE7F30EA4B0C91931DF0 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				A925CA343A2447BE92231887 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		02187AC41E8942AFBA81EF33 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/s7.h */ = {isa = PBXBuildFile; fileRef = 9DF6FDDCB35F4334A759E7E6 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/s7.h */; };
+		12EB3D26700444AAA50A7299 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc/RingBuffer.h */ = {isa = PBXBuildFile; fileRef = 4D96174FCB8742DA90142A87 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc/RingBuffer.h */; };
+		1B10AD420CD04849BDFDEA1A /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/headers.c */ = {isa = PBXBuildFile; fileRef = 04A2463B8680475DA9468DEB /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/headers.c */; };
+		1B484E0229FB444794EE14B0 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/AudioFileIO/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 131F931C15774548A3D19ACF /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/AudioFileIO/CMakeLists.txt */; };
+		21B19612580542448F06DB44 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/unix-config.h */ = {isa = PBXBuildFile; fileRef = 741FC375080149EBBDC6A4A4 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/unix-config.h */; };
+		2C06F74DBD9048EBBB06D0C4 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/xen.h */ = {isa = PBXBuildFile; fileRef = 095DD7E3AB434285BE492C2C /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/xen.h */; };
+		332A6000329D457BB94055C4 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/AudioFileIO/AudioFile.cpp */ = {isa = PBXBuildFile; fileRef = D49F26F31B0B4554BA0E8B11 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/AudioFileIO/AudioFile.cpp */; };
+		39EF3D43C9574D08BD1C2D57 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/audio.c */ = {isa = PBXBuildFile; fileRef = 022EB6AB5B014A24902C6294 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/audio.c */; };
+		4A192D8A29134B70B469CC74 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/xen.c */ = {isa = PBXBuildFile; fileRef = 27E15FC58E6C454AAFA04F67 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/xen.c */; };
+		50E5DCF6CFF740A5BACC0BDB /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/s7.c */ = {isa = PBXBuildFile; fileRef = 4D1072FB9A1F4841BF567479 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/s7.c */; };
+		57F9F69D1B6A4A22BD861349 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/_sndlib.h */ = {isa = PBXBuildFile; fileRef = D9916DD2A52B4B56BD036E2A /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/_sndlib.h */; };
+		602E77CDF230417794533D4C /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/MUSI6106Exec/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = B0538DE0703B4364BDE92C88 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/MUSI6106Exec/CMakeLists.txt */; };
+		6495F129753542ACB8F09ABC /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc/Util.h */ = {isa = PBXBuildFile; fileRef = 6538219799B741B591E02C7C /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc/Util.h */; };
+		6682EE3271474F0186B7E671 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/clm-strings.h */ = {isa = PBXBuildFile; fileRef = 311431F4FCD3455992F7E526 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/clm-strings.h */; };
+		7159227BCBA343639ACBF941 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc/AudioFileIf.h */ = {isa = PBXBuildFile; fileRef = A57034874F6D4757945FA306 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc/AudioFileIf.h */; };
+		746FF03A228740D1B15529D6 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/sndlib-strings.h */ = {isa = PBXBuildFile; fileRef = 943C5EBC4F9E4149B6B96B4F /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/sndlib-strings.h */; };
+		78E938D04E86495E95C7A72A /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/clm2xen.c */ = {isa = PBXBuildFile; fileRef = 71C689D592A54BA0B1E4772E /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/clm2xen.c */; };
+		7A3D66C5D3004DD2BF8EFBAE /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/io.c */ = {isa = PBXBuildFile; fileRef = 4AE4E052B5D349D184AB13D6 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/io.c */; };
+		83FBFF77A17747EAA7BDEE15 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/sndlib2xen.c */ = {isa = PBXBuildFile; fileRef = 01BEFECA460D4449940E1E9D /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/sndlib2xen.c */; };
+		8FF828A3AF5C4BE28C25EF6C /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/clm.c */ = {isa = PBXBuildFile; fileRef = C9DE2AF568B740889586886F /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/clm.c */; };
+		993047545AC044B6A964EBA4 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/vct.h */ = {isa = PBXBuildFile; fileRef = 0A0EE98CAF4C4B3588AEE0C0 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/vct.h */; };
+		A95EECDF7B21402D8A74390D /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 786E74E7AAB14C0294FE4020 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/CMakeLists.txt */; };
+		AA93D9092589438997BFDA76 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/AudioFileIO/AudioFile.h */ = {isa = PBXBuildFile; fileRef = 5D28BEA154734E95A6B34891 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/AudioFileIO/AudioFile.h */; };
+		AB75085724204507BF1F7BC8 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/clm2xen.h */ = {isa = PBXBuildFile; fileRef = 8EB428CF0FDF4C3698B64E17 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/clm2xen.h */; };
+		B25B9907D8E94FFEBC2DD9F8 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/vct.c */ = {isa = PBXBuildFile; fileRef = 72443882D9F4410B8AAA5FA6 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/vct.c */; };
+		B66E8802D9974A05A0003EB5 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/MUSI6106Exec/MUSI6106Exec.cpp */ = {isa = PBXBuildFile; fileRef = 91DA6BDEAEB74CAD881F3924 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/MUSI6106Exec/MUSI6106Exec.cpp */; };
+		B88648A4A4294088883733FD /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/clm.h */ = {isa = PBXBuildFile; fileRef = 60B4BFE2D34A4C7C9B8EF15A /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/clm.h */; };
+		BCF6EAE60519433084FFF210 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/sound.c */ = {isa = PBXBuildFile; fileRef = BE0C10BDE04A44708A3167C7 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/sound.c */; };
+		BD00FC8E4FA345DE86064F5E /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/mus-config.h */ = {isa = PBXBuildFile; fileRef = C36D8B20967845B5A4018D87 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/mus-config.h */; };
+		CC4870722E2947BE8D80F64B /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/AudioFileIO/AudioFileIf.cpp */ = {isa = PBXBuildFile; fileRef = 54406CCBD72C4EE497F1D250 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/AudioFileIO/AudioFileIf.cpp */; };
+		DC426370784546C2A84FD498 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc/Vector.h */ = {isa = PBXBuildFile; fileRef = D24F334C829B4C118FDEB9FF /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc/Vector.h */; };
+		E621EA8ECAB04C48991ED626 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/sndlib.h */ = {isa = PBXBuildFile; fileRef = 3242A4593F3E46E29253DD25 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/sndlib.h */; };
+		FCA6AEF5F36C4DEB812B84DF /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/sndlib2xen.h */ = {isa = PBXBuildFile; fileRef = 92FE0623CE28478F95CCF7B6 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/sndlib2xen.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		017032EA59844C45A5ADB29A /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		612B6364125048ACB3E7C25D /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		B135B854369B4239957159B5 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		E495FBCB29DE474EB7008899 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		05390B9F95174FD9AA9C5406 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 022AB548F1E44306AF8DA23D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E46AFCEEE514B559CF7FF9F;
+			remoteInfo = sndlib;
+		};
+		138BD06FFD8C4835B1C189EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 022AB548F1E44306AF8DA23D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E46AFCEEE514B559CF7FF9F;
+			remoteInfo = sndlib;
+		};
+		2FA73DAA511749C390E7F419 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 022AB548F1E44306AF8DA23D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4077B56FC79F49148BFFE397;
+			remoteInfo = ZERO_CHECK;
+		};
+		77857134AE10414B887CED22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 022AB548F1E44306AF8DA23D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4077B56FC79F49148BFFE397;
+			remoteInfo = ZERO_CHECK;
+		};
+		96147B3BDE0E47238D18D902 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 022AB548F1E44306AF8DA23D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E46AFCEEE514B559CF7FF9F;
+			remoteInfo = sndlib;
+		};
+		ACB26B9EF2B44D9DB2931E86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 022AB548F1E44306AF8DA23D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70EDC774D8A2442E940BEAE3;
+			remoteInfo = AudioFileIO;
+		};
+		D522EDDF876647A59401DD10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 022AB548F1E44306AF8DA23D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4077B56FC79F49148BFFE397;
+			remoteInfo = ZERO_CHECK;
+		};
+		F2D5C4323BB9482AB2F4CDCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 022AB548F1E44306AF8DA23D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4588C2B67CB44F738312FA02;
+			remoteInfo = MUSI6106Exec;
+		};
+		F541EC920D65468D9C8E66E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 022AB548F1E44306AF8DA23D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4077B56FC79F49148BFFE397;
+			remoteInfo = ZERO_CHECK;
+		};
+		F5B1A01C5B854C1BB8A027CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 022AB548F1E44306AF8DA23D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70EDC774D8A2442E940BEAE3;
+			remoteInfo = AudioFileIO;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01BEFECA460D4449940E1E9D /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/sndlib2xen.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sndlib2xen.c; path = 3rdparty/sndlib/sndlib2xen.c; sourceTree = SOURCE_ROOT; };
+		022EB6AB5B014A24902C6294 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/audio.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = audio.c; path = 3rdparty/sndlib/audio.c; sourceTree = SOURCE_ROOT; };
+		04A2463B8680475DA9468DEB /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/headers.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = headers.c; path = 3rdparty/sndlib/headers.c; sourceTree = SOURCE_ROOT; };
+		095DD7E3AB434285BE492C2C /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/xen.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = xen.h; path = 3rdparty/sndlib/xen.h; sourceTree = SOURCE_ROOT; };
+		0A0EE98CAF4C4B3588AEE0C0 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/vct.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = vct.h; path = 3rdparty/sndlib/vct.h; sourceTree = SOURCE_ROOT; };
+		11925CA2A153427D80209CC9 /* sndlib */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libsndlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		131F931C15774548A3D19ACF /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/AudioFileIO/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = src/AudioFileIO/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		27E15FC58E6C454AAFA04F67 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/xen.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = xen.c; path = 3rdparty/sndlib/xen.c; sourceTree = SOURCE_ROOT; };
+		311431F4FCD3455992F7E526 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/clm-strings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = "clm-strings.h"; path = "3rdparty/sndlib/clm-strings.h"; sourceTree = SOURCE_ROOT; };
+		3242A4593F3E46E29253DD25 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/sndlib.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sndlib.h; path = 3rdparty/sndlib/sndlib.h; sourceTree = SOURCE_ROOT; };
+		4AE4E052B5D349D184AB13D6 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/io.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = io.c; path = 3rdparty/sndlib/io.c; sourceTree = SOURCE_ROOT; };
+		4D1072FB9A1F4841BF567479 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/s7.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = s7.c; path = 3rdparty/sndlib/s7.c; sourceTree = SOURCE_ROOT; };
+		4D96174FCB8742DA90142A87 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc/RingBuffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = RingBuffer.h; path = src/inc/RingBuffer.h; sourceTree = SOURCE_ROOT; };
+		54406CCBD72C4EE497F1D250 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/AudioFileIO/AudioFileIf.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = AudioFileIf.cpp; path = src/AudioFileIO/AudioFileIf.cpp; sourceTree = SOURCE_ROOT; };
+		5D28BEA154734E95A6B34891 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/AudioFileIO/AudioFile.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = AudioFile.h; path = src/AudioFileIO/AudioFile.h; sourceTree = SOURCE_ROOT; };
+		60B4BFE2D34A4C7C9B8EF15A /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/clm.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = clm.h; path = 3rdparty/sndlib/clm.h; sourceTree = SOURCE_ROOT; };
+		6538219799B741B591E02C7C /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc/Util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Util.h; path = src/inc/Util.h; sourceTree = SOURCE_ROOT; };
+		71C689D592A54BA0B1E4772E /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/clm2xen.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = clm2xen.c; path = 3rdparty/sndlib/clm2xen.c; sourceTree = SOURCE_ROOT; };
+		72443882D9F4410B8AAA5FA6 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/vct.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vct.c; path = 3rdparty/sndlib/vct.c; sourceTree = SOURCE_ROOT; };
+		741FC375080149EBBDC6A4A4 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/unix-config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = "unix-config.h"; path = "3rdparty/sndlib/unix-config.h"; sourceTree = SOURCE_ROOT; };
+		786E74E7AAB14C0294FE4020 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = 3rdparty/sndlib/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		846D4ADF87AB4954B6B58462 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		8EB428CF0FDF4C3698B64E17 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/clm2xen.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = clm2xen.h; path = 3rdparty/sndlib/clm2xen.h; sourceTree = SOURCE_ROOT; };
+		91DA6BDEAEB74CAD881F3924 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/MUSI6106Exec/MUSI6106Exec.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = MUSI6106Exec.cpp; path = src/MUSI6106Exec/MUSI6106Exec.cpp; sourceTree = SOURCE_ROOT; };
+		92FE0623CE28478F95CCF7B6 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/sndlib2xen.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sndlib2xen.h; path = 3rdparty/sndlib/sndlib2xen.h; sourceTree = SOURCE_ROOT; };
+		943C5EBC4F9E4149B6B96B4F /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/sndlib-strings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = "sndlib-strings.h"; path = "3rdparty/sndlib/sndlib-strings.h"; sourceTree = SOURCE_ROOT; };
+		9487B73C5BD44F82909460D9 /* MUSI6106Exec */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = MUSI6106Exec; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DF6FDDCB35F4334A759E7E6 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/s7.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = s7.h; path = 3rdparty/sndlib/s7.h; sourceTree = SOURCE_ROOT; };
+		A57034874F6D4757945FA306 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc/AudioFileIf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = AudioFileIf.h; path = src/inc/AudioFileIf.h; sourceTree = SOURCE_ROOT; };
+		B0538DE0703B4364BDE92C88 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/MUSI6106Exec/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = src/MUSI6106Exec/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		BE0C10BDE04A44708A3167C7 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/sound.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sound.c; path = 3rdparty/sndlib/sound.c; sourceTree = SOURCE_ROOT; };
+		C36D8B20967845B5A4018D87 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/mus-config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = "mus-config.h"; path = "3rdparty/sndlib/mus-config.h"; sourceTree = SOURCE_ROOT; };
+		C9DE2AF568B740889586886F /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/clm.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = clm.c; path = 3rdparty/sndlib/clm.c; sourceTree = SOURCE_ROOT; };
+		D24F334C829B4C118FDEB9FF /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc/Vector.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Vector.h; path = src/inc/Vector.h; sourceTree = SOURCE_ROOT; };
+		D49F26F31B0B4554BA0E8B11 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/AudioFileIO/AudioFile.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = AudioFile.cpp; path = src/AudioFileIO/AudioFile.cpp; sourceTree = SOURCE_ROOT; };
+		D930BAF32D22412B83F79D47 /* AudioFileIO */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAudioFileIO.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9916DD2A52B4B56BD036E2A /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/_sndlib.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = _sndlib.h; path = 3rdparty/sndlib/_sndlib.h; sourceTree = SOURCE_ROOT; };
+		E1021D64BE474E188B5B3821 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0689758930BD453E9B14A462 /* sndlib */ = {
+			isa = PBXGroup;
+			children = (
+				26530B4874F944ABB8C88FC3 /* Source Files */,
+				BCEB99943F244BF89EB7E1D6 /* Header Files */,
+				786E74E7AAB14C0294FE4020 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/CMakeLists.txt */,
+			);
+			name = sndlib;
+			sourceTree = "<group>";
+		};
+		26530B4874F944ABB8C88FC3 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				022EB6AB5B014A24902C6294 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/audio.c */,
+				C9DE2AF568B740889586886F /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/clm.c */,
+				71C689D592A54BA0B1E4772E /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/clm2xen.c */,
+				04A2463B8680475DA9468DEB /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/headers.c */,
+				4AE4E052B5D349D184AB13D6 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/io.c */,
+				4D1072FB9A1F4841BF567479 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/s7.c */,
+				01BEFECA460D4449940E1E9D /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/sndlib2xen.c */,
+				BE0C10BDE04A44708A3167C7 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/sound.c */,
+				72443882D9F4410B8AAA5FA6 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/vct.c */,
+				27E15FC58E6C454AAFA04F67 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/xen.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		2C12001BBA23452698E7979A /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				91DA6BDEAEB74CAD881F3924 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/MUSI6106Exec/MUSI6106Exec.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		2DA969AAD5F24E298C8CA135 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				4BBE072F19D94B4796C38EB4 /* CMake Rules */,
+				846D4ADF87AB4954B6B58462 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		4BBE072F19D94B4796C38EB4 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		6AC9C84D235E4E3DA30EC69A /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				9DABF7C669D04DD1AFDE2279 /* CMake Rules */,
+				E1021D64BE474E188B5B3821 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		72160EAB6EF14BADAD09EF38 = {
+			isa = PBXGroup;
+			children = (
+				2DA969AAD5F24E298C8CA135 /* ALL_BUILD */,
+				6AC9C84D235E4E3DA30EC69A /* ZERO_CHECK */,
+				AD59D1AE371044AA9615B9CF /* MUSI6106Exec */,
+				DEBB3F29EEEB428F98C699B8 /* AudioFileIO */,
+				0689758930BD453E9B14A462 /* sndlib */,
+				94E4D8AC6FB843D393F1812F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		94E4D8AC6FB843D393F1812F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9487B73C5BD44F82909460D9 /* MUSI6106Exec */,
+				D930BAF32D22412B83F79D47 /* AudioFileIO */,
+				11925CA2A153427D80209CC9 /* sndlib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9DABF7C669D04DD1AFDE2279 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		AD59D1AE371044AA9615B9CF /* MUSI6106Exec */ = {
+			isa = PBXGroup;
+			children = (
+				2C12001BBA23452698E7979A /* Source Files */,
+				D4C22BA2F9544197A636FE3B /* Header Files */,
+				B0538DE0703B4364BDE92C88 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/MUSI6106Exec/CMakeLists.txt */,
+			);
+			name = MUSI6106Exec;
+			sourceTree = "<group>";
+		};
+		B50C51B713B640E6B351D288 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				5D28BEA154734E95A6B34891 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/AudioFileIO/AudioFile.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		BCEB99943F244BF89EB7E1D6 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				D9916DD2A52B4B56BD036E2A /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/_sndlib.h */,
+				311431F4FCD3455992F7E526 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/clm-strings.h */,
+				60B4BFE2D34A4C7C9B8EF15A /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/clm.h */,
+				8EB428CF0FDF4C3698B64E17 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/clm2xen.h */,
+				C36D8B20967845B5A4018D87 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/mus-config.h */,
+				9DF6FDDCB35F4334A759E7E6 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/s7.h */,
+				943C5EBC4F9E4149B6B96B4F /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/sndlib-strings.h */,
+				3242A4593F3E46E29253DD25 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/sndlib.h */,
+				92FE0623CE28478F95CCF7B6 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/sndlib2xen.h */,
+				741FC375080149EBBDC6A4A4 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/unix-config.h */,
+				0A0EE98CAF4C4B3588AEE0C0 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/vct.h */,
+				095DD7E3AB434285BE492C2C /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/xen.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		D4C22BA2F9544197A636FE3B /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				A57034874F6D4757945FA306 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc/AudioFileIf.h */,
+				4D96174FCB8742DA90142A87 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc/RingBuffer.h */,
+				6538219799B741B591E02C7C /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc/Util.h */,
+				D24F334C829B4C118FDEB9FF /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc/Vector.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		DEBB3F29EEEB428F98C699B8 /* AudioFileIO */ = {
+			isa = PBXGroup;
+			children = (
+				FCBB221B31634C9EBF0E781E /* Source Files */,
+				B50C51B713B640E6B351D288 /* Header Files */,
+				131F931C15774548A3D19ACF /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/AudioFileIO/CMakeLists.txt */,
+			);
+			name = AudioFileIO;
+			sourceTree = "<group>";
+		};
+		FCBB221B31634C9EBF0E781E /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				D49F26F31B0B4554BA0E8B11 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/AudioFileIO/AudioFile.cpp */,
+				54406CCBD72C4EE497F1D250 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/AudioFileIO/AudioFileIf.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4588C2B67CB44F738312FA02 /* MUSI6106Exec */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEC4FCF9C5444584931B3EE1 /* Build configuration list for PBXNativeTarget "MUSI6106Exec" */;
+			buildPhases = (
+				1583FE420C81465AB7C3529F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				12180C03813A4064BDD3CBD6 /* PBXTargetDependency */,
+				3863BD672A5048228CDB1E8D /* PBXTargetDependency */,
+				2D1FC4E37E624A18A616E268 /* PBXTargetDependency */,
+			);
+			name = MUSI6106Exec;
+			productName = MUSI6106Exec;
+			productReference = 9487B73C5BD44F82909460D9 /* MUSI6106Exec */;
+			productType = "com.apple.product-type.tool";
+		};
+		70EDC774D8A2442E940BEAE3 /* AudioFileIO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47973A6E1B7349349AA4890D /* Build configuration list for PBXNativeTarget "AudioFileIO" */;
+			buildPhases = (
+				D631952FF44D4266938F8820 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCFBE96BBF90446AA13F53DF /* PBXTargetDependency */,
+				D117A6AB14084D8D89A5DB8C /* PBXTargetDependency */,
+			);
+			name = AudioFileIO;
+			productName = AudioFileIO;
+			productReference = D930BAF32D22412B83F79D47 /* AudioFileIO */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8E46AFCEEE514B559CF7FF9F /* sndlib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90C70056F4EF4679AB036FCD /* Build configuration list for PBXNativeTarget "sndlib" */;
+			buildPhases = (
+				42BD117666174DD98F670112 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BB6102C13F946FF95E98F3E /* PBXTargetDependency */,
+			);
+			name = sndlib;
+			productName = sndlib;
+			productReference = 11925CA2A153427D80209CC9 /* sndlib */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		022AB548F1E44306AF8DA23D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0920;
+			};
+			buildConfigurationList = F7711A0DCB5D47EF9539DFC0 /* Build configuration list for PBXProject "MUSI6106" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				B135B854369B4239957159B5 /* Debug */,
+				017032EA59844C45A5ADB29A /* Release */,
+				612B6364125048ACB3E7C25D /* MinSizeRel */,
+				E495FBCB29DE474EB7008899 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 72160EAB6EF14BADAD09EF38;
+			projectDirPath = ../;
+			projectRoot = "";
+			targets = (
+				16512C9322CB4CAABBE385D3 /* ALL_BUILD */,
+				4077B56FC79F49148BFFE397 /* ZERO_CHECK */,
+				4588C2B67CB44F738312FA02 /* MUSI6106Exec */,
+				70EDC774D8A2442E940BEAE3 /* AudioFileIO */,
+				8E46AFCEEE514B559CF7FF9F /* sndlib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26835CC11D3B472999279012 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld -f /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		A925CA343A2447BE92231887 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld -f /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		C5B2C14119004376BDB51076 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		EBAC2368138441929CF072E2 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1583FE420C81465AB7C3529F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B66E8802D9974A05A0003EB5 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/MUSI6106Exec/MUSI6106Exec.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42BD117666174DD98F670112 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39EF3D43C9574D08BD1C2D57 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/audio.c */,
+				8FF828A3AF5C4BE28C25EF6C /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/clm.c */,
+				78E938D04E86495E95C7A72A /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/clm2xen.c */,
+				1B10AD420CD04849BDFDEA1A /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/headers.c */,
+				7A3D66C5D3004DD2BF8EFBAE /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/io.c */,
+				50E5DCF6CFF740A5BACC0BDB /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/s7.c */,
+				83FBFF77A17747EAA7BDEE15 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/sndlib2xen.c */,
+				BCF6EAE60519433084FFF210 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/sound.c */,
+				B25B9907D8E94FFEBC2DD9F8 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/vct.c */,
+				4A192D8A29134B70B469CC74 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib/xen.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D631952FF44D4266938F8820 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				332A6000329D457BB94055C4 /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/AudioFileIO/AudioFile.cpp */,
+				CC4870722E2947BE8D80F64B /* /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/AudioFileIO/AudioFileIf.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		12180C03813A4064BDD3CBD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70EDC774D8A2442E940BEAE3 /* AudioFileIO */;
+			targetProxy = F5B1A01C5B854C1BB8A027CC /* PBXContainerItemProxy */;
+		};
+		14105F2CE7954D51905FCE27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70EDC774D8A2442E940BEAE3 /* AudioFileIO */;
+			targetProxy = ACB26B9EF2B44D9DB2931E86 /* PBXContainerItemProxy */;
+		};
+		2D1FC4E37E624A18A616E268 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4077B56FC79F49148BFFE397 /* ZERO_CHECK */;
+			targetProxy = 77857134AE10414B887CED22 /* PBXContainerItemProxy */;
+		};
+		3863BD672A5048228CDB1E8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E46AFCEEE514B559CF7FF9F /* sndlib */;
+			targetProxy = 96147B3BDE0E47238D18D902 /* PBXContainerItemProxy */;
+		};
+		4CBCCEA0A60543D6A6274028 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E46AFCEEE514B559CF7FF9F /* sndlib */;
+			targetProxy = 05390B9F95174FD9AA9C5406 /* PBXContainerItemProxy */;
+		};
+		5BB6102C13F946FF95E98F3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4077B56FC79F49148BFFE397 /* ZERO_CHECK */;
+			targetProxy = 2FA73DAA511749C390E7F419 /* PBXContainerItemProxy */;
+		};
+		61B8FEBFDBF143539816874B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4588C2B67CB44F738312FA02 /* MUSI6106Exec */;
+			targetProxy = F2D5C4323BB9482AB2F4CDCD /* PBXContainerItemProxy */;
+		};
+		77E3BA9F90D141B1851595AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4077B56FC79F49148BFFE397 /* ZERO_CHECK */;
+			targetProxy = F541EC920D65468D9C8E66E8 /* PBXContainerItemProxy */;
+		};
+		D117A6AB14084D8D89A5DB8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4077B56FC79F49148BFFE397 /* ZERO_CHECK */;
+			targetProxy = D522EDDF876647A59401DD10 /* PBXContainerItemProxy */;
+		};
+		DCFBE96BBF90446AA13F53DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E46AFCEEE514B559CF7FF9F /* sndlib */;
+			targetProxy = 138BD06FFD8C4835B1C189EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		05765BEB86BE4F02BA65BBE6 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/lib/MinSizeRel;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/inc,/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc,/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/inc,/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = AudioFileIO;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/AudioFileIO;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		0615FBDB30AA49288608AC79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		07D4481D2EEA49B79BC0E340 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/build;
+			};
+			name = RelWithDebInfo;
+		};
+		0CFFE7DCE8CA4AC380CCE52E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/build;
+			};
+			name = Debug;
+		};
+		22AB53479CD8414FA2F1C92C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/lib/MinSizeRel;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -w  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = sndlib;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/AudioFileIO/sndlib;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		2530C426F2FA4F68B0EACDC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/lib/release;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -w  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = sndlib;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/AudioFileIO/sndlib;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		2B126CEFF47742019C391580 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/build;
+			};
+			name = Release;
+		};
+		2CD2DF238E0642D0B7888527 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/lib/relwithdebinfo;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG -w  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = sndlib;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/AudioFileIO/sndlib;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		34BA01E8F0E641CD9EEFF398 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		3870CF02986A4FACA37DFBF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/lib/debug;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/inc,/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc,/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/inc,/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = AudioFileIO;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/AudioFileIO;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		3CF5479423B6459797E76693 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/lib/debug;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "   -w  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = sndlib;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/AudioFileIO/sndlib;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		3F69E1DB91FD4738B595706C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		4B04294AE2B9425B97FEBEE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bin/debug;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/inc,/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc,/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/inc);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/lib/debug/libAudioFileIO.a /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/lib/debug/libsndlib.a";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = MUSI6106Exec;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/MUSI6106Exec;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		51C7A6F8E62E4B0C8FAB092E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		8366775919444961A7648E32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bin/release;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/inc,/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc,/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/inc);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/lib/release/libAudioFileIO.a /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/lib/release/libsndlib.a";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = MUSI6106Exec;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/MUSI6106Exec;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		859A5813081749FBAD6262F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/lib/release;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/inc,/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc,/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/inc,/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = AudioFileIO;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/AudioFileIO;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		93613120E40C4E31BB731349 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bin/relwithdebinfo;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/inc,/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc,/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/inc);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/lib/relwithdebinfo/libAudioFileIO.a /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/lib/relwithdebinfo/libsndlib.a";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = MUSI6106Exec;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/MUSI6106Exec;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		9CF09E48DA634BDA81B2656B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		A71EDA1EC9B443B89CF37482 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		AAA474CFA86F4ECF92BF16B2 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bin/MinSizeRel;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/inc,/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc,/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/inc);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/lib/MinSizeRel/libAudioFileIO.a /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/lib/MinSizeRel/libsndlib.a";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = MUSI6106Exec;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/MUSI6106Exec;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		B77DB732E568484390155BAC /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		D110996C42DD43E7AFDE4313 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/build;
+			};
+			name = MinSizeRel;
+		};
+		F1793F554C6B4F4A9B6EAD24 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/lib/relwithdebinfo;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/inc,/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/src/inc,/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/inc,/Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/3rdparty/sndlib);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = AudioFileIO;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld/AudioFileIO;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		FD063E65658C4AFDA453C261 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/liuhanyu1030/Documents/audiosoftware/AudioSoftwareHW/Assignment_1/bld;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		47973A6E1B7349349AA4890D /* Build configuration list for PBXNativeTarget "AudioFileIO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3870CF02986A4FACA37DFBF5 /* Debug */,
+				859A5813081749FBAD6262F8 /* Release */,
+				05765BEB86BE4F02BA65BBE6 /* MinSizeRel */,
+				F1793F554C6B4F4A9B6EAD24 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		90C70056F4EF4679AB036FCD /* Build configuration list for PBXNativeTarget "sndlib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CF5479423B6459797E76693 /* Debug */,
+				2530C426F2FA4F68B0EACDC2 /* Release */,
+				22AB53479CD8414FA2F1C92C /* MinSizeRel */,
+				2CD2DF238E0642D0B7888527 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B8DDBE7F30EA4B0C91931DF0 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51C7A6F8E62E4B0C8FAB092E /* Debug */,
+				0615FBDB30AA49288608AC79 /* Release */,
+				A71EDA1EC9B443B89CF37482 /* MinSizeRel */,
+				9CF09E48DA634BDA81B2656B /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C3C676285CFB43FC88E46DB2 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F69E1DB91FD4738B595706C /* Debug */,
+				34BA01E8F0E641CD9EEFF398 /* Release */,
+				FD063E65658C4AFDA453C261 /* MinSizeRel */,
+				B77DB732E568484390155BAC /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F7711A0DCB5D47EF9539DFC0 /* Build configuration list for PBXProject "MUSI6106" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CFFE7DCE8CA4AC380CCE52E /* Debug */,
+				2B126CEFF47742019C391580 /* Release */,
+				D110996C42DD43E7AFDE4313 /* MinSizeRel */,
+				07D4481D2EEA49B79BC0E340 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FEC4FCF9C5444584931B3EE1 /* Build configuration list for PBXNativeTarget "MUSI6106Exec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B04294AE2B9425B97FEBEE1 /* Debug */,
+				8366775919444961A7648E32 /* Release */,
+				AAA474CFA86F4ECF92BF16B2 /* MinSizeRel */,
+				93613120E40C4E31BB731349 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 022AB548F1E44306AF8DA23D /* Project object */;
+}
