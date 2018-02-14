@@ -12,7 +12,8 @@ using std::cout;
 using std::endl;
 
 // local function declarations
-void    showClInfo ();
+void    showClInfo();
+int     testcases(CCombFilterIf *&pInstance);
 
 /////////////////////////////////////////////////////////////////////////////////
 // main function
@@ -23,7 +24,7 @@ int main(int argc, char* argv[])
 
     static const int        kBlockSize = 1024;
     static const float      fMaxFilterDelayTime = 1.0f;
-    static const float      fDefaultFilterDelayTime = fMaxFilterDelayTime;
+    static const float      fDefaultFilterDelayTime = 0.5f;
     static const float      fDefaultFilterGain = 0.5f;
 
     clock_t                 time = 0;
@@ -47,7 +48,11 @@ int main(int argc, char* argv[])
     //////////////////////////////////////////////////////////////////////////////
     // parse command line arguments
     // arguments should be in this sequence: (input_file_path filter_type delay_time gain output_file_path)
-    
+    if (argc == 1)
+    {
+        cout << "No arguments given. Running tests on the comb filter design." << endl;
+        return testcases(pInstance);
+    }
     if (argc != 6)
     {
         cout << "Missing arguments!" << endl;
@@ -149,8 +154,7 @@ int main(int argc, char* argv[])
 
 }
 
-
-void     showClInfo()
+void showClInfo()
 {
     cout << "GTCMT MUSI6106 Executable" << endl;
     cout << "(c) 2014-2018 by Alexander Lerch" << endl;
@@ -158,4 +162,13 @@ void     showClInfo()
 
     return;
 }
+
+int testcases(CCombFilterIf *&pInstance)
+{
+    pInstance->init((iFilterType ? CCombFilterIf::CombFilterType_t::kCombIIR : CCombFilterIf::CombFilterType_t::kCombFIR), fMaxFilterDelayTime, stFileSpec.fSampleRateInHz, stFileSpec.iNumChannels);
+    return 0;
+}
+
+
+
 

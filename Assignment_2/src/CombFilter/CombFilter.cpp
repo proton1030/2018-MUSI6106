@@ -1,6 +1,7 @@
 
 // standard headers
 #include <limits>
+#include <iostream>
 
 // project headers
 #include "MUSI6106Config.h"
@@ -66,14 +67,20 @@ Error_t CCombFilterBase::setParam( CCombFilterIf::FilterParam_t eParam, float fP
         return kFunctionInvalidArgsError;
     
     // Sets value for given filter parameter
-    m_afParam[eParam] = fParamValue;
+    
     if (eParam == CCombFilterIf::FilterParam_t::kParamDelay)
     {
+        fParamValue = floor(fParamValue);
+        CCombFilterBase::m_afParam[eParam] = fParamValue;
         for(int i = 0; i < m_iNumChannels; i++)
         {
-            m_ppCRingBuffer[i]->setReadIdx(int(m_ppCRingBuffer[i]->getLength()-fParamValue));
-            m_ppCRingBuffer[i]->setWriteIdx(0);
+            m_ppCRingBuffer[i]->setWriteIdx(CUtil::float2int<int>(fParamValue));
+            m_ppCRingBuffer[i]->setReadIdx(0);
         }
+    }
+    else
+    {
+        CCombFilterBase::m_afParam[eParam] = fParamValue;
     }
 
     return kNoError;
