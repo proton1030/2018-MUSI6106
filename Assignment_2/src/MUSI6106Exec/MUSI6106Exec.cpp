@@ -125,10 +125,8 @@ int main(int argc, char* argv[])
         long long iNumFrames = kBlockSize;
         phAudioFile->readData(ppfAudioData, iNumFrames);
 
-        for (int c = 0; c < stFileSpec.iNumChannels; c++)
-        {
-            pInstance -> process (ppfAudioData, ppfAudioOutputData, iNumFrames);
-        }
+        pInstance -> process (ppfAudioData, ppfAudioOutputData, iNumFrames);
+        
         phAudioOutputFile->writeData(ppfAudioOutputData, iNumFrames);
     }
 
@@ -165,7 +163,15 @@ void showClInfo()
 
 int testcases(CCombFilterIf *&pInstance)
 {
-    pInstance->init((iFilterType ? CCombFilterIf::CombFilterType_t::kCombIIR : CCombFilterIf::CombFilterType_t::kCombFIR), fMaxFilterDelayTime, stFileSpec.fSampleRateInHz, stFileSpec.iNumChannels);
+    pInstance->init(CCombFilterIf::CombFilterType_t::kCombIIR, 0.1, 1000, 1);
+    pInstance->setParam(CCombFilterIf::FilterParam_t::kParamDelay, 0.01);
+    pInstance->setParam(CCombFilterIf::FilterParam_t::kParamGain, 0.5);
+    
+//    pInstance -> process (ppfAudioData, ppfAudioOutputData, iNumFrames);
+    
+    
+    
+    
     return 0;
 }
 
