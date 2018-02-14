@@ -14,8 +14,10 @@
 #include "CombFilter.h"
 
 #define MIN_DELAY_TIME_IN_FRAMES 1.0f
-#define MIN_IIR_GAIN -1.0f
-#define MAX_IIR_GAIN 1.0f
+#define MIN_IIR_GAIN (-1.0f)
+#define MAX_IIR_GAIN (1.0f)
+#define DEFAULT_DELAY_TIME_IN_FRAMES 10.0f
+#define DEFAULT_GAIN 0.5f
 
 
 CCombFilterBase::CCombFilterBase( int iMaxDelayInFrames, int iNumChannels ) :
@@ -26,10 +28,16 @@ CCombFilterBase::CCombFilterBase( int iMaxDelayInFrames, int iNumChannels ) :
     assert(iNumChannels > 0);
     
     // Parameter range set for FIR filters
-    CCombFilterBase::m_aafParamRange[0][0] = std::numeric_limits<float>::min();
+    CCombFilterBase::m_aafParamRange[0][0] = std::numeric_limits<float>::lowest();
     CCombFilterBase::m_aafParamRange[0][1] = std::numeric_limits<float>::max();
     CCombFilterBase::m_aafParamRange[1][0] = MIN_DELAY_TIME_IN_FRAMES;
     CCombFilterBase::m_aafParamRange[1][1] = iMaxDelayInFrames;
+    CCombFilterBase::m_afParam[0] = DEFAULT_GAIN;
+    CCombFilterBase::m_afParam[1] = DEFAULT_DELAY_TIME_IN_FRAMES;
+    
+    isUsingDefaultParams[0] = true;
+    isUsingDefaultParams[1] = true;
+    isFirstTimeProcess = true;
     
     // Allocate memory for ring buffer
     m_ppCRingBuffer = new CRingBuffer<float>* [iNumChannels];
@@ -64,12 +72,16 @@ Error_t CCombFilterBase::resetInstance()
 Error_t CCombFilterBase::setParam( CCombFilterIf::FilterParam_t eParam, float fParamValue )
 {
     if (!isInParamRange(eParam, fParamValue))
+    {
+        std::cout << "Warning: " << (eParam ? "Delay in frames" : "Gain") << " out of bounds and was set to default value: "
+        << (eParam ? DEFAULT_DELAY_TIME_IN_FRAMES : DEFAULT_GAIN) << "." << std::endl;
         return kFunctionInvalidArgsError;
+    }
     
     // Sets value for given filter parameter
-    
     if (eParam == CCombFilterIf::FilterParam_t::kParamDelay)
     {
+        isUsingDefaultParams[1] = false;
         fParamValue = floor(fParamValue);
         CCombFilterBase::m_afParam[eParam] = fParamValue;
         for(int i = 0; i < m_iNumChannels; i++)
@@ -80,6 +92,7 @@ Error_t CCombFilterBase::setParam( CCombFilterIf::FilterParam_t eParam, float fP
     }
     else
     {
+        isUsingDefaultParams[0] = false;
         CCombFilterBase::m_afParam[eParam] = fParamValue;
     }
 
@@ -106,6 +119,15 @@ bool CCombFilterBase::isInParamRange( CCombFilterIf::FilterParam_t eParam, float
 
 Error_t CCombFilterFir::process( float **ppfInputBuffer, float **ppfOutputBuffer, int iNumberOfFrames )
 {
+    if (isFirstTimeProcess)
+    {
+        if (isUsingDefaultParams[0])
+            std::cout << "Warning: Using default value (0.5f) for Gain." << std::endl;
+        if (isUsingDefaultParams[1])
+            std::cout << "Warning: Using default values (10.0f) for Delay time in frames." << std::endl;
+        isFirstTimeProcess = false;
+    }
+    
     for(int i = 0; i < CCombFilterBase::m_iNumChannels; i++)
     {
         for(int j = 0; j < iNumberOfFrames; j++)
@@ -128,6 +150,15 @@ CCombFilterIir::CCombFilterIir (int iMaxDelayInFrames, int iNumChannels) : CComb
 
 Error_t CCombFilterIir::process( float **ppfInputBuffer, float **ppfOutputBuffer, int iNumberOfFrames )
 {
+    if (isFirstTimeProcess)
+    {
+        if (isUsingDefaultParams[0])
+            std::cout << "Warning: Using default value (0.5f) for Gain." << std::endl;
+        if (isUsingDefaultParams[1])
+            std::cout << "Warning: Using default values (10.0f) for Delay time in frames." << std::endl;
+        isFirstTimeProcess = false;
+    }
+    
     for(int i = 0; i < CCombFilterBase::m_iNumChannels; i++)
     {
         for(int j = 0; j < iNumberOfFrames; j++)

@@ -25,6 +25,9 @@ protected:
     float   m_aafParamRange[CCombFilterIf::kNumFilterParams][2];
 
     int     m_iNumChannels;
+    
+    bool    isUsingDefaultParams[2];
+    bool    isFirstTimeProcess;
 
 private:
     CCombFilterBase(const CCombFilterBase& that);

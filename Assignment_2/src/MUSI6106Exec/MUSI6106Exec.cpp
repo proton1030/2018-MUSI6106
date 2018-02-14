@@ -19,30 +19,29 @@ int     testcases(CCombFilterIf *&pInstance);
 // main function
 int main(int argc, char* argv[])
 {
-    std::string             sInputFilePath,                 //!< file paths
-                            sOutputFilePath;
+    std::string                 sInputFilePath,                 //!< file paths
+                                sOutputFilePath;
 
-    static const int        kBlockSize = 1024;
-    static const float      fMaxFilterDelayTime = 1.0f;
-    static const float      fDefaultFilterDelayTime = 0.5f;
-    static const float      fDefaultFilterGain = 0.5f;
+    static const int            kBlockSize = 1024;
+    long long                   iNumFrames = kBlockSize;
+    static const float          fMaxFilterDelayTime = 1.0f;
 
-    clock_t                 time = 0;
+    clock_t                     time = 0;
     
-    int                     iFilterType;
-    float                   fFilterDelayTime;
-    float                   fFilterGain;
+    int                         iFilterType;
+    float                       fFilterDelayTime;
+    float                       fFilterGain;
 
-    float                   **ppfAudioData = 0;
-    float                   **ppfAudioOutputData = 0;
+    float                       **ppfAudioData = 0;
+    float                       **ppfAudioOutputData = 0;
 
-    CAudioFileIf            *phAudioFile = 0;
-    CAudioFileIf            *phAudioOutputFile = 0;
+    CAudioFileIf                *phAudioFile = 0;
+    CAudioFileIf                *phAudioOutputFile = 0;
     
-    CAudioFileIf::FileSpec_t stFileSpec;
+    CAudioFileIf::FileSpec_t    stFileSpec;
 
-    CCombFilterIf           *pInstance = 0;
-    CCombFilterIf::create(pInstance);
+    CCombFilterIf               *pInstance = 0;
+    
     showClInfo();
 
     //////////////////////////////////////////////////////////////////////////////
@@ -50,7 +49,7 @@ int main(int argc, char* argv[])
     // arguments should be in this sequence: (input_file_path filter_type delay_time gain output_file_path)
     if (argc == 1)
     {
-        cout << "No arguments given. Running tests on the comb filter design." << endl;
+        cout << "No arguments given. Running tests on the comb filter design. Also check TestLog.txt for detailed information." << endl << endl;
         return testcases(pInstance);
     }
     if (argc != 6)
@@ -92,7 +91,12 @@ int main(int argc, char* argv[])
     
     //////////////////////////////////////////////////////////////////////////////
     // Init Comb Filter
+    CCombFilterIf::create(pInstance);
     pInstance->init((iFilterType ? CCombFilterIf::CombFilterType_t::kCombIIR : CCombFilterIf::CombFilterType_t::kCombFIR), fMaxFilterDelayTime, stFileSpec.fSampleRateInHz, stFileSpec.iNumChannels);
+    
+    // set parameters of the comb filter
+    pInstance->setParam(CCombFilterIf::FilterParam_t::kParamDelay, fFilterDelayTime);
+    pInstance->setParam(CCombFilterIf::FilterParam_t::kParamGain, fFilterGain);
 
     //////////////////////////////////////////////////////////////////////////////
     // allocate memory
@@ -107,26 +111,12 @@ int main(int argc, char* argv[])
     time = clock();
     
     //////////////////////////////////////////////////////////////////////////////
-    // set parameters of the comb filter
-    if (pInstance->setParam(CCombFilterIf::FilterParam_t::kParamDelay, fFilterDelayTime))
-    {
-        pInstance->setParam(CCombFilterIf::FilterParam_t::kParamDelay, fDefaultFilterDelayTime);
-        cout << "Warning: Filter delay length out of bounds. Delay time length been set to " << fDefaultFilterDelayTime << " seconds." << endl;
-    }
-    if (pInstance->setParam(CCombFilterIf::FilterParam_t::kParamGain, fFilterGain))
-    {
-        pInstance->setParam(CCombFilterIf::FilterParam_t::kParamGain, fDefaultFilterGain);
-        cout << "Warning: Filter gain out of bounds. Gain been set to " << fDefaultFilterGain << "." << endl;
-    }
-    
     // get audio data and write it to the output file
+    
     while (!phAudioFile->isEof())
     {
-        long long iNumFrames = kBlockSize;
         phAudioFile->readData(ppfAudioData, iNumFrames);
-
-        pInstance -> process (ppfAudioData, ppfAudioOutputData, iNumFrames);
-        
+        pInstance->process(ppfAudioData, ppfAudioOutputData, iNumFrames);
         phAudioOutputFile->writeData(ppfAudioOutputData, iNumFrames);
     }
 
@@ -163,15 +153,223 @@ void showClInfo()
 
 int testcases(CCombFilterIf *&pInstance)
 {
-    pInstance->init(CCombFilterIf::CombFilterType_t::kCombIIR, 0.1, 1000, 1);
-    pInstance->setParam(CCombFilterIf::FilterParam_t::kParamDelay, 0.01);
-    pInstance->setParam(CCombFilterIf::FilterParam_t::kParamGain, 0.5);
+    std::fstream fileStream;
+    fileStream.open("./TestLog.txt", std::fstream::out);
     
-//    pInstance -> process (ppfAudioData, ppfAudioOutputData, iNumFrames);
+    // Test case 1
+    // Passing an impulse into an IIR filter without setting the delay duration.
+    // Also setting gain out of bounds.
+    {
+        cout << "*********************************************************************************************" << endl;
+        cout << "Test case 1: Passing an impulse into an IIR filter without setting the delay duration." << endl;
+        cout << "Also setting gain out of bounds." << endl << endl;
+        fileStream << "*********************************************************************************************" << endl;
+        fileStream << "Test case 1: Passing an impulse into an IIR filter without setting the delay duration." << endl;
+        fileStream << "Also setting gain out of bounds." << endl << endl;
+        const int iSignalLength = 100;
+        float fSignalLength = float(iSignalLength);
+        float **ppfInputSignal = 0;
+        float **ppfOutputSignal = 0;
+        float fExpectedSignal[iSignalLength] = {0};
+        
+        ppfInputSignal = new float*[1];
+        ppfOutputSignal = new float*[1];
+        for (int i = 0; i < 1; i++)
+        {
+            ppfInputSignal[i] = new float[iSignalLength];
+            memset (ppfInputSignal[i], 0, sizeof(float) * fSignalLength);
+            ppfOutputSignal[i] = new float[iSignalLength];
+            memset (ppfOutputSignal[i], 0, sizeof(float) * fSignalLength);
+        }
+        ppfInputSignal[0][0] = 1.0f;
+        fExpectedSignal[0] = 1.0f;
+        for (int i = 10; i < iSignalLength; i = i + 10)
+            fExpectedSignal[i] = fExpectedSignal[i - 10] / 2.0f;
+        
+        CCombFilterIf::destroy(pInstance);
+        CCombFilterIf::create(pInstance);
+        pInstance->init(CCombFilterIf::CombFilterType_t::kCombIIR, 0.01f, 1000, 1);
+        pInstance->setParam(CCombFilterIf::FilterParam_t::kParamGain, 2.0f);
+        pInstance->process(ppfInputSignal, ppfOutputSignal, iSignalLength);
+        
+        cout << endl <<"Input    signal: ";
+        fileStream << endl << "Input    signal:";
+        for (int i = 0; i < iSignalLength; i++)
+        {
+            cout << ppfInputSignal[0][i] << " ";
+            fileStream << ppfInputSignal[0][i] << " ";
+        }
+        cout << endl << "Output   signal: ";
+        fileStream << endl << "Output   signal:";
+        for (int i = 0; i < iSignalLength; i++)
+        {
+            cout << ppfOutputSignal[0][i] << " ";
+            fileStream << ppfOutputSignal[0][i] << " ";
+        }
+        cout << endl << "Expected signal: ";
+        fileStream << endl << "Expected signal:";
+        for (int i = 0; i < iSignalLength; i++)
+        {
+            cout << fExpectedSignal[i] << " ";
+            fileStream << fExpectedSignal[i] << " ";
+        }
+        cout << endl;
+        fileStream << endl;
+        
+        for (int i = 0; i < 1; i++)
+        {
+            delete[] ppfInputSignal[i];
+            delete[] ppfOutputSignal[i];
+        }
+        delete[] ppfInputSignal;
+        delete[] ppfOutputSignal;
+        ppfInputSignal = 0;
+        ppfOutputSignal = 0;
+    }
     
+    // Test case 2
+    // Passing an impulse train into a FIR filter. Setting gain to 2.0f and delay in frames to 1.0f.
+    {
+        cout << "*********************************************************************************************" << endl;
+        cout << "Test case 2: Passing a unit train into an FIR filter. Setting gain to 2.0f and delay in frames to 10.0f." << endl << endl;
+        fileStream << "*********************************************************************************************" << endl;
+        fileStream << "Test case 2: Passing a unit train into an FIR filter. Setting gain to 2.0f and delay in frames to 10.0f." << endl << endl;
+        const int iSignalLength = 20;
+        float fSignalLength = float(iSignalLength);
+        float **ppfInputSignal = 0;
+        float **ppfOutputSignal = 0;
+        float fExpectedSignal[iSignalLength] = {0};
+        
+        ppfInputSignal = new float*[1];
+        ppfOutputSignal = new float*[1];
+        for (int i = 0; i < 1; i++)
+        {
+            ppfInputSignal[i] = new float[iSignalLength];
+            memset (ppfInputSignal[i], 0, sizeof(float) * fSignalLength);
+            ppfOutputSignal[i] = new float[iSignalLength];
+            memset (ppfOutputSignal[i], 0, sizeof(float) * fSignalLength);
+            for (int j = 0; j < iSignalLength; j++)
+                ppfInputSignal[i][j] = 1.0f;
+        }
+        for (int j = 0; j < iSignalLength; j++)
+            fExpectedSignal[j] = (j < 10 ? 1.0f : 1.0f + fExpectedSignal[j - 10] * 2.0f);
+        
+        CCombFilterIf::destroy(pInstance);
+        CCombFilterIf::create(pInstance);
+        pInstance->init(CCombFilterIf::CombFilterType_t::kCombFIR, 1.0f, 1000, 1);
+        pInstance->setParam(CCombFilterIf::FilterParam_t::kParamGain, 2.0f);
+        pInstance->setParam(CCombFilterIf::FilterParam_t::kParamDelay, 0.01f);
+        pInstance->process(ppfInputSignal, ppfOutputSignal, iSignalLength);
+        
+        cout <<"Input    signal: ";
+        fileStream << "Input    signal:";
+        for (int i = 0; i < iSignalLength; i++)
+        {
+            cout << ppfInputSignal[0][i] << " ";
+            fileStream << ppfInputSignal[0][i] << " ";
+        }
+        cout << endl << "Output   signal: ";
+        fileStream << endl << "Output   signal:";
+        for (int i = 0; i < iSignalLength; i++)
+        {
+            cout << ppfOutputSignal[0][i] << " ";
+            fileStream << ppfOutputSignal[0][i] << " ";
+        }
+        cout << endl << "Expected signal: ";
+        fileStream << endl << "Expected signal:";
+        for (int i = 0; i < iSignalLength; i++)
+        {
+            cout << fExpectedSignal[i] << " ";
+            fileStream << fExpectedSignal[i] << " ";
+        }
+        cout << endl;
+        fileStream << endl;
+        
+        for (int i = 0; i < 1; i++)
+        {
+            delete[] ppfInputSignal[i];
+            delete[] ppfOutputSignal[i];
+        }
+        delete[] ppfInputSignal;
+        delete[] ppfOutputSignal;
+        ppfInputSignal = 0;
+        ppfOutputSignal = 0;
+    }
     
+    // Test case 3
+    // Passing a ramp signal with a slope of 1 into an IIR filter. Setting gain to -0.5f and delay in frames to 1.0f.
+    {
+        cout << "*********************************************************************************************" << endl;
+        cout << "Test case 3: Passing a ramp signal with a slope of 1 into an IIR filter. Setting gain to -0.5f and delay in frames to 1.0f." << endl << endl;
+        fileStream << "*********************************************************************************************" << endl;
+        fileStream << "Test case 3: Passing a ramp signal with a slope of 1 into an IIR filter. Setting gain to -0.5f and delay in frames to 1.0f." << endl << endl;
+        const int iSignalLength = 10;
+        float fSignalLength = float(iSignalLength);
+        float **ppfInputSignal = 0;
+        float **ppfOutputSignal = 0;
+        float fExpectedSignal[iSignalLength] = {0, 1, 1.5, 2.25, 2.875, 3.5625, 4.21875, 4.89062, 5.55469, 6.22266};
+        
+        ppfInputSignal = new float*[1];
+        ppfOutputSignal = new float*[1];
+        for (int i = 0; i < 1; i++)
+        {
+            ppfInputSignal[i] = new float[iSignalLength];
+            memset (ppfInputSignal[i], 0, sizeof(float) * fSignalLength);
+            ppfOutputSignal[i] = new float[iSignalLength];
+            memset (ppfOutputSignal[i], 0, sizeof(float) * fSignalLength);
+            for (int j = 0; j < iSignalLength; j++)
+                ppfInputSignal[i][j] = float(j);
+        }
+        
+        CCombFilterIf::destroy(pInstance);
+        CCombFilterIf::create(pInstance);
+        pInstance->init(CCombFilterIf::CombFilterType_t::kCombIIR, 1.0f, 1000, 1);
+        pInstance->setParam(CCombFilterIf::FilterParam_t::kParamGain, -0.5f);
+        pInstance->setParam(CCombFilterIf::FilterParam_t::kParamDelay, 0.001f);
+        pInstance->process(ppfInputSignal, ppfOutputSignal, iSignalLength);
+        
+        cout <<"Input    signal: ";
+        fileStream << "Input    signal:";
+        for (int i = 0; i < iSignalLength; i++)
+        {
+            cout << ppfInputSignal[0][i] << " ";
+            fileStream << ppfInputSignal[0][i] << " ";
+        }
+        cout << endl << "Output   signal: ";
+        fileStream << endl << "Output   signal:";
+        for (int i = 0; i < iSignalLength; i++)
+        {
+            cout << ppfOutputSignal[0][i] << " ";
+            fileStream << ppfOutputSignal[0][i] << " ";
+        }
+        cout << endl << "Expected signal: ";
+        fileStream << endl << "Expected signal:";
+        for (int i = 0; i < iSignalLength; i++)
+        {
+            cout << fExpectedSignal[i] << " ";
+            fileStream << fExpectedSignal[i] << " ";
+        }
+        cout << endl;
+        fileStream << endl;
+        
+        for (int i = 0; i < 1; i++)
+        {
+            delete[] ppfInputSignal[i];
+            delete[] ppfOutputSignal[i];
+        }
+        delete[] ppfInputSignal;
+        delete[] ppfOutputSignal;
+        ppfInputSignal = 0;
+        ppfOutputSignal = 0;
+    }
     
+    cout << "*********************************************************************************************" << endl;
+    cout << "Test Ended" << endl << endl;
+    fileStream << "*********************************************************************************************" << endl;
+    fileStream << "Test Ended" << endl << endl;
     
+    CCombFilterIf::destroy(pInstance);
+    fileStream.close();
     return 0;
 }
 
