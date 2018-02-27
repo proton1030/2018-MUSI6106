@@ -3,6 +3,8 @@ set (APP MUSI6106Exec)
 set (AudioLIB AudioFileIO)
 set (CombFilterLIB CombFilter)
 set (FftLIB Fft)
+set (VibratoLIB Vibrato)
+
 
 ## get all source files (note: this is considered bad style, one could also add file names individually)
 file(GLOB ${APP}_SOURCES RELATIVE ${CMAKE_SOURCE_DIR}/src/${APP} *.c;*.cpp;*.txt)
@@ -15,7 +17,7 @@ add_inc_directories ()
 add_executable(${APP} ${${APP}_SOURCES} ${${APP}_HEADERS})
 
 # link the libraries
-target_link_libraries(${APP} ${LIB} ${TestLIB}  ${FftLIB} ${CombFilterLIB} ${AudioLIB} ${SndLIB} ${OS_LIBS})
+target_link_libraries(${APP} ${LIB} ${TestLIB}  ${FftLIB} ${CombFilterLIB} ${AudioLIB} ${SndLIB} ${VibratoLIB} ${OS_LIBS})
 
 if (WITH_CPPCHECKTARGET)
 	# cppcheck target in the IDE
@@ -26,4 +28,3 @@ if (WITH_CPPCHECKTARGET)
 						TARGET_NAME "CppCheck_${APP}"
 					  INCLUDES ${PROJECT_INCLUDES})
 endif(WITH_CPPCHECKTARGET)
-

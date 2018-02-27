@@ -5,8 +5,7 @@
 
 // forward declaration
 class CLfo;
-template <class T>
-class CRingBuffer;
+template <class T> class CRingBuffer;
 
 /*
  * brief explanation about your class-interface design
@@ -17,23 +16,22 @@ class CVibrato
 public:
     enum VibratoParam_t
     {
-        kParamDelay,                    //!< delay in seconds for specification of ring buffer
-        kParamVibratoWidth,
-        kParamVibratoFreq,
+        kParamVibratoWidthInSec,
+        kParamVibratoFreqInHz,
         
         kNumVibratoParams
     };
+
+    CVibrato (float fSampleRateInHz, int iNumChannels);
     
-    CVibrato (float fVibratoFreqInHz, float fVibratoWidthInSec, float fSampleRateInHz, int iNumChannels);
+    ~CVibrato ();
     
-    virtual ~CVibrato ();
-    
-    /*! resets the internal variables (requires new call of init)
+    /*! resets the internal variables
      \return Error_t
      */
     Error_t reset ();
     
-    /*! sets a comb filter parameter
+    /*! sets a vibrato parameter
      \param eParam what parameter (see ::FilterParam_t)
      \param fParamValue value of the parameter
      \return Error_t
@@ -56,20 +54,19 @@ public:
 
 private:
     float   m_fSampleRate;      //!< audio sample rate in Hz
-    int     m_iNumChannels;
+    int     m_iNumChannels;     //!< number of channels for input data
     
     CRingBuffer<float>  **m_ppCRingBuffer;
     CLfo *m_pCLfo;
     
-    int   m_afParam[kNumVibratoParams];
-    int   m_aafParamRange[kNumVibratoParams][2];
+    float   m_afParam[kNumVibratoParams];
+    float   m_aafParamRange[kNumVibratoParams][2];
     
     bool    isUsingDefaultParams[2];
     bool    isFirstTimeProcess;
     
     bool    isInParamRange (VibratoParam_t eParam, float fValue);
     Error_t instantiateLfo (CLfo*& pCLfo);
-
 };
 
 #endif // #if !defined(__Vibrato_hdr__)
