@@ -70,12 +70,13 @@ int main(int argc, char* argv[])
     }
 
     //////////////////////////////////////////////////////////////////////////////
-    // Init Comb Filter
+    // Init Vibrato
     pVibratoInstance = new CVibrato(stFileSpec.fSampleRateInHz, stFileSpec.iNumChannels);
 
-    // set parameters of the comb filter
+    // set parameters of the vibrato
+    pVibratoInstance->setParam(CVibrato::VibratoParam_t::kParamVibratoWidthInSec, 0.05f);
     pVibratoInstance->setParam(CVibrato::VibratoParam_t::kParamVibratoFreqInHz, 10.0f);
-    pVibratoInstance->setParam(CVibrato::VibratoParam_t::kParamVibratoWidthInSec, 0.005f);
+//    pVibratoInstance->setParam(CVibrato::VibratoParam_t::kParamVibratoDelayInSec, 0.f);
 
     //////////////////////////////////////////////////////////////////////////////
     // allocate memory

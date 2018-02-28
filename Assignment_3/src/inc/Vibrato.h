@@ -18,8 +18,17 @@ public:
     {
         kParamVibratoWidthInSec,
         kParamVibratoFreqInHz,
+        kParamVibratoDelayInSec,
         
         kNumVibratoParams
+    };
+    
+    enum VibratoParamBound_t
+    {
+        kVibratoParamMax,
+        kVibratoParamMin,
+        
+        kNumVibratoParamBounds
     };
 
     CVibrato (float fSampleRateInHz, int iNumChannels);
@@ -60,13 +69,12 @@ private:
     CLfo *m_pCLfo;
     
     float   m_afParam[kNumVibratoParams];
-    float   m_aafParamRange[kNumVibratoParams][2];
+    float   m_aafParamRange[kNumVibratoParams][kNumVibratoParamBounds];
     
-    bool    isUsingDefaultParams[2];
+    bool    isUsingDefaultParams[kNumVibratoParams];
     bool    isFirstTimeProcess;
     
     bool    isInParamRange (VibratoParam_t eParam, float fValue);
-    Error_t instantiateLfo (CLfo*& pCLfo);
 };
 
 #endif // #if !defined(__Vibrato_hdr__)
