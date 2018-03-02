@@ -19,8 +19,10 @@ SUITE(Vibrato)
     {
         VibratoData()
         {
-            // setup
-            // e.g., allocate a vibrato object and test signal (newly created for each test case)
+            const float     fSampleFreq = 44100.F;
+            const int       iNumChannels = 2;
+            
+            m_pCVibrato = new CVibrato(fSampleFreq, iNumChannels);
         }
 
         ~VibratoData()
@@ -32,6 +34,7 @@ SUITE(Vibrato)
         // e.g., a reusable process() function
 
         // e.g., a member vibrato object to be reused in each test
+        CVibrato    *m_pCVibrato;
     };
 
     TEST(MyTestWithNoFixture)

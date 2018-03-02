@@ -75,8 +75,7 @@ int main(int argc, char* argv[])
 
     // set parameters of the vibrato
     pVibratoInstance->setParam(CVibrato::VibratoParam_t::kParamVibratoWidthInSec, 0.05f);
-    pVibratoInstance->setParam(CVibrato::VibratoParam_t::kParamVibratoFreqInHz, 10.0f);
-//    pVibratoInstance->setParam(CVibrato::VibratoParam_t::kParamVibratoDelayInSec, 0.f);
+    pVibratoInstance->setParam(CVibrato::VibratoParam_t::kParamVibratoFreqInHz, 2.0f);
 
     //////////////////////////////////////////////////////////////////////////////
     // allocate memory

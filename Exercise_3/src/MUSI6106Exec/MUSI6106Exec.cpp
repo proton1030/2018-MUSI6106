@@ -40,7 +40,7 @@ int main(int argc, char* argv[])
 
     //////////////////////////////////////////////////////////////////////////////
     // parse command line arguments
-    if (argc < 2)
+    if (argc < 4)
     {
         cout << "Missing audio input path!";
         return -1;
@@ -65,7 +65,7 @@ int main(int argc, char* argv[])
     pCRingBuffer = new CRingBuffer<float>* [stFileSpec.iNumChannels];
     for(int i = 0; i < stFileSpec.iNumChannels; i++)
     {
-        pCRingBuffer[i] = new CRingBuffer<float>(stFileSpec.iNumChannels);
+        pCRingBuffer[i] = new CRingBuffer<float>(kBlockSize);
     }
     
     CFft::createInstance (pCFft);
@@ -107,18 +107,32 @@ int main(int argc, char* argv[])
         pCFft->doFft (pComplexSpectrum, pCurrentBlock);
         pCFft->getMagnitude(pCurrentBlock, pComplexSpectrum);
         
+        for (int i = 0; i < iNumFrames; i++)
+        {
+            hOutputFile << pCurrentBlock[i] << "\t";
+        }
+        hOutputFile << endl;
         
     }
     
-    
     while (!phAudioFile->isEof())
     {
+        phAudioFile->readData(ppfAudioData, iNumHopFrames);
         for (int c = 0; c < stFileSpec.iNumChannels; c++)
         {
-            phAudioFile->readData(ppfAudioData, iNumHopFrames);
             pCRingBuffer[c]->put(ppfAudioData[c], iNumHopFrames);
             
-            pCRingBuffer[c]->get(pCurrentBlock, iNumHopFrames);
+            pCRingBuffer[c]->setReadIdx(pCRingBuffer[c]->getReadIdx() + iNumHopFrames);
+            pCRingBuffer[c]->setWriteIdx(pCRingBuffer[c]->getWriteIdx() + iNumHopFrames);
+            
+            pCRingBuffer[c]->get(pCurrentBlock, iNumFrames);
+            pCFft->doFft (pComplexSpectrum, pCurrentBlock);
+            pCFft->getMagnitude(pCurrentBlock, pComplexSpectrum);
+            
+            for (int i = 0; i < iNumFrames; i++)
+            {
+                hOutputFile << pCurrentBlock[i] << "\t";
+            }
             
             hOutputFile << endl;
         }

@@ -18,7 +18,7 @@ class CLfo
 {
 public:
     CLfo (float fLfoFreqInHz, float fLfoWidthInSamples, float fSampleFreqInHz) :
-    m_iBufferLength(int(ceil(fSampleFreqInHz))),
+    m_iBufferLength(int(round(fSampleFreqInHz))),
     m_fSampleRate(fSampleFreqInHz),
     m_fLfoFreqInHz(fLfoFreqInHz),
     m_fLfoWidthInSamples(fLfoWidthInSamples),
@@ -46,14 +46,21 @@ public:
     void reset ()
     {
         m_fReadLoc = 0.0f;
+        memset (m_ptSinewaveBuff, 0, sizeof(float) * m_iBufferLength);
+        CSynthesis::generateSine (m_ptSinewaveBuff, WAVETABLE_FREQ, m_iBufferLength, m_iBufferLength);
+        m_pCRingBuffer->put(m_ptSinewaveBuff , m_iBufferLength);
     }
     
     float getNextValue ()
     {
         float fReturnValue = m_fLfoWidthInSamples * m_pCRingBuffer->get(m_fReadLoc);
-        m_fReadLoc = m_fReadLoc + m_fLfoFreqInHz * (m_iBufferLength / m_fSampleRate) > m_iBufferLength ?
-                    m_fReadLoc + m_fLfoFreqInHz * (m_iBufferLength / m_fSampleRate) - m_iBufferLength :
-                    m_fReadLoc + m_fLfoFreqInHz * (m_iBufferLength / m_fSampleRate);
+        
+        //In case the readloc goes larger than the upper bound of float data type
+        if (m_fReadLoc + m_fLfoFreqInHz * (m_iBufferLength / m_fSampleRate) > m_iBufferLength)
+            m_fReadLoc = m_fReadLoc + m_fLfoFreqInHz * (m_iBufferLength / m_fSampleRate) - m_iBufferLength;
+        else
+            m_fReadLoc = m_fReadLoc + m_fLfoFreqInHz * (m_iBufferLength / m_fSampleRate);
+        
         return fReturnValue;
     }
     

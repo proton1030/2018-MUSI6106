@@ -18,7 +18,6 @@ public:
     {
         kParamVibratoWidthInSec,
         kParamVibratoFreqInHz,
-        kParamVibratoDelayInSec,
         
         kNumVibratoParams
     };
@@ -70,9 +69,6 @@ private:
     
     float   m_afParam[kNumVibratoParams];
     float   m_aafParamRange[kNumVibratoParams][kNumVibratoParamBounds];
-    
-    bool    isUsingDefaultParams[kNumVibratoParams];
-    bool    isFirstTimeProcess;
     
     bool    isInParamRange (VibratoParam_t eParam, float fValue);
 };
