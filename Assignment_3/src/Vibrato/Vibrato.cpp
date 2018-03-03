@@ -10,7 +10,7 @@
 #include <limits>
 
 #define MIN_VIBRATO_WIDTH_IN_SEC 0.0f
-#define MAX_VIBRATO_WIDTH_IN_SEC 1000.0f
+#define MAX_VIBRATO_WIDTH_IN_SEC 0.5f
 #define MIN_VIBRATO_FREQ_IN_HZ 0.0f
 #define MAX_VIBRATO_FREQ_IN_HZ std::numeric_limits<float>::max()
 #define DEFAULT_VIBRATO_WIDTH_IN_SEC MIN_VIBRATO_WIDTH_IN_SEC

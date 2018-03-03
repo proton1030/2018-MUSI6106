@@ -32,7 +32,7 @@ public:
 
     CVibrato (float fSampleRateInHz, int iNumChannels);
     
-    ~CVibrato ();
+    virtual ~CVibrato ();
     
     /*! resets the internal variables
      \return Error_t

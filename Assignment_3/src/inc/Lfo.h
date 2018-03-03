@@ -8,8 +8,6 @@
 #include "Synthesis.h"
 #include "RingBuffer.h"
 
-#include <iostream>
-
 #define WAVETABLE_FREQ 1.0f
 #define WAVETABLE_WIDTH 1.0f
 
@@ -72,6 +70,7 @@ public:
     void setLfoWidthInSamples (float widthInSecs)
     {
         m_fLfoWidthInSamples = widthInSecs * m_fSampleRate;
+        m_fReadLoc = 0.0f;
     }
     
     

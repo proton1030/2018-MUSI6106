@@ -27,7 +27,6 @@ int main(int argc, char* argv[])
     clock_t                     time = 0;
 
     float                       **ppfAudioInputData = 0;
-    float                       **ppfAudioOutputData = 0;
 
     CAudioFileIf                *phAudioInputFile = 0;
     CAudioFileIf                *phAudioOutputFile = 0;
@@ -83,10 +82,6 @@ int main(int argc, char* argv[])
     for (int i = 0; i < stFileSpec.iNumChannels; i++)
         ppfAudioInputData[i] = new float[kBlockSize];
 
-    ppfAudioOutputData = new float*[stFileSpec.iNumChannels];
-    for (int i = 0; i < stFileSpec.iNumChannels; i++)
-        ppfAudioOutputData[i] = new float[kBlockSize];
-
     time = clock();
 
     //////////////////////////////////////////////////////////////////////////////
@@ -95,8 +90,8 @@ int main(int argc, char* argv[])
     {
         long long iNumFrames = kBlockSize;
         phAudioInputFile->readData(ppfAudioInputData, iNumFrames);
-        pVibratoInstance->process(ppfAudioInputData, ppfAudioOutputData, iNumFrames);
-        phAudioOutputFile->writeData(ppfAudioOutputData, iNumFrames);
+        pVibratoInstance->process(ppfAudioInputData, ppfAudioInputData, iNumFrames);
+        phAudioOutputFile->writeData(ppfAudioInputData, iNumFrames);
     }
 
     cout << "\nreading/writing done in: \t" << (clock() - time)*1.F / CLOCKS_PER_SEC << " seconds." << endl;
@@ -110,11 +105,6 @@ int main(int argc, char* argv[])
         delete[] ppfAudioInputData[i];
     delete[] ppfAudioInputData;
     ppfAudioInputData = 0;
-
-    for (int i = 0; i < stFileSpec.iNumChannels; i++)
-        delete[] ppfAudioOutputData[i];
-    delete[] ppfAudioOutputData;
-    ppfAudioOutputData = 0;
 
     delete pVibratoInstance;
     pVibratoInstance = 0;
