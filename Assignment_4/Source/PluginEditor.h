@@ -35,6 +35,7 @@ private:
     VibratoPluginAudioProcessor& processor;
     ScopedPointer<Slider> pSliderVibratoWidth, pSliderVibratoFreq;
     ScopedPointer<TextButton> pButtonBypass;
+    ScopedPointer<Label> pLabelVibratoWidth, pLabelVibratoFreq;
     
     void buttonClicked (Button* buttonThatWasClicked) override;
     void buttonStateChanged(Button* buttonThatWasClicked) override;

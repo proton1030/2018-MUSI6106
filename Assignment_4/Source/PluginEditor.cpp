@@ -30,6 +30,20 @@ VibratoPluginAudioProcessorEditor::VibratoPluginAudioProcessorEditor (VibratoPlu
     pSliderVibratoFreq->setColour(Slider::textBoxOutlineColourId, Colours::darkgrey);
     pSliderVibratoFreq->addListener(this);
     
+    addAndMakeVisible (pLabelVibratoWidth = new Label ("widthInSecLabel", TRANS("Width In Seconds")));
+    pLabelVibratoWidth->setFont (Font (15.00f, Font::plain).withTypefaceStyle ("Regular"));
+    pLabelVibratoWidth->setJustificationType (Justification::centredLeft);
+    pLabelVibratoWidth->setEditable (false, false, false);
+    pLabelVibratoWidth->setColour (TextEditor::textColourId, Colours::black);
+    pLabelVibratoWidth->setColour (TextEditor::backgroundColourId, Colour (0x00000000));
+    
+    addAndMakeVisible (pLabelVibratoFreq = new Label ("freqInHzLabel", TRANS("Frequency In Hertz")));
+    pLabelVibratoFreq ->setFont (Font (15.00f, Font::plain).withTypefaceStyle ("Regular"));
+    pLabelVibratoFreq ->setJustificationType (Justification::centredLeft);
+    pLabelVibratoFreq ->setEditable (false, false, false);
+    pLabelVibratoFreq ->setColour (TextEditor::textColourId, Colours::black);
+    pLabelVibratoFreq ->setColour (TextEditor::backgroundColourId, Colour (0x00000000));
+    
     addAndMakeVisible (pButtonBypass = new TextButton ("Bypass"));
     pButtonBypass->addListener (this);
     
@@ -60,8 +74,10 @@ void VibratoPluginAudioProcessorEditor::paint (Graphics& g)
 
 void VibratoPluginAudioProcessorEditor::resized()
 {
-    pSliderVibratoWidth->setBounds (proportionOfWidth (0.0000f), proportionOfHeight (0.3000f), proportionOfWidth (0.500f), proportionOfHeight (0.5000f));
-    pSliderVibratoFreq->setBounds (proportionOfWidth (0.4500f), proportionOfHeight (0.3000f), proportionOfWidth (0.5800f), proportionOfHeight (0.5000f));
+    pLabelVibratoWidth->setBounds (proportionOfWidth (0.1000f), proportionOfHeight (0.1000f), proportionOfWidth (0.500f), proportionOfHeight (0.3300f));
+    pLabelVibratoFreq->setBounds (proportionOfWidth (0.5700f), proportionOfHeight (0.1000f), proportionOfWidth (0.5800f), proportionOfHeight (0.3300f));
+    pSliderVibratoWidth->setBounds (proportionOfWidth (0.0000f), proportionOfHeight (0.3500f), proportionOfWidth (0.500f), proportionOfHeight (0.5000f));
+    pSliderVibratoFreq->setBounds (proportionOfWidth (0.4500f), proportionOfHeight (0.3500f), proportionOfWidth (0.5800f), proportionOfHeight (0.5000f));
     pButtonBypass->setBounds(proportionOfWidth (0.800f), proportionOfHeight (0.0500f), proportionOfWidth (0.1500f), proportionOfHeight (0.100f));
     pSliderVibratoWidth->setValue(processor.pVibratoInstance->getParam(CVibrato::kParamModWidthInS));
     pSliderVibratoFreq->setValue(processor.pVibratoInstance->getParam(CVibrato::kParamModFreqInHz));
