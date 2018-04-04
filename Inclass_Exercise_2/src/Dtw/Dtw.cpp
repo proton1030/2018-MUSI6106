@@ -6,7 +6,7 @@
 
 CDtw::CDtw( void )
 {
-    ppNodeMat = 0;
+    
 }
 
 CDtw::~CDtw( void )
@@ -16,14 +16,8 @@ CDtw::~CDtw( void )
 
 Error_t CDtw::init( int iNumRows, int iNumCols )
 {
+    NodeVector.push_back(<#std::vector<CDtw::Node *, std::allocator<CDtw::Node *> >::const_reference __x#>)
     return kNoError;
-    ppNodeMat = new Node*[iNumRows];
-    for (i=0; i<iNumCols; i++)
-        ppNodeMat[i] = new Node
-        
-        ppfAudioData = new float*[stFileSpec.iNumChannels];
-    for (int i = 0; i < stFileSpec.iNumChannels; i++)
-        ppfAudioData[i] = new float[kBlockSize];
 }
 
 Error_t CDtw::reset()

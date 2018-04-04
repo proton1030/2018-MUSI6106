@@ -26,7 +26,7 @@ VibratoPluginAudioProcessorEditor::VibratoPluginAudioProcessorEditor (VibratoPlu
     addAndMakeVisible(pSliderVibratoFreq = new Slider ("Freq"));
     pSliderVibratoFreq->setSliderStyle (Slider::RotaryHorizontalVerticalDrag);
     pSliderVibratoFreq->setTextBoxStyle (Slider::TextBoxBelow, true, 100, 20);
-    pSliderVibratoWidth->setSkewFactorFromMidPoint(50.0);
+    pSliderVibratoFreq->setSkewFactorFromMidPoint(50.0);
     pSliderVibratoFreq->setColour(Slider::textBoxOutlineColourId, Colours::darkgrey);
     pSliderVibratoFreq->addListener(this);
     

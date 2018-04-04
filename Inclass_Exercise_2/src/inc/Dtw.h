@@ -5,6 +5,7 @@
 #pragma once
 
 #include "ErrorDef.h"
+#include <vector>
 
 /*! \brief basic dynamic time warping (http://www.audiocontentanalysis.org/code/helper-functions/dtw/)
 */
@@ -73,10 +74,7 @@ private:
         Directions_t direction;
     };
     
-    Node **ppNodeMat;
-    
-    
-};
+    std::vector<Node*> NodeVecto};
 
 
 #endif
