@@ -28,7 +28,7 @@ m_pCLfo(0)
     m_aafParamRange[kParamVibratoWidthInSec][kVibratoParamMax] = MAX_VIBRATO_WIDTH_IN_SEC;
     m_aafParamRange[kParamVibratoFreqInHz][kVibratoParamMin] = MIN_VIBRATO_FREQ_IN_HZ;
     m_aafParamRange[kParamVibratoFreqInHz][kVibratoParamMax] = MAX_VIBRATO_FREQ_IN_HZ;
-    
+
     m_pCLfo = new CLfo (m_afParam[kParamVibratoFreqInHz], m_afParam[kParamVibratoWidthInSec], m_fSampleRate);
     m_ppCRingBuffer = new CRingBuffer<float>* [iNumChannels];
     for(int i = 0; i < iNumChannels; i++)
@@ -42,7 +42,7 @@ CVibrato::~CVibrato()
 {
     delete m_pCLfo;
     m_pCLfo = 0;
-    
+
     for(int i = 0; i < m_iNumChannels; i++)
         delete m_ppCRingBuffer[i];
     delete [] m_ppCRingBuffer;
@@ -57,7 +57,7 @@ Error_t CVibrato::reset()
     m_pCLfo->reset();
     for(int i = 0; i < m_iNumChannels; i++)
         m_ppCRingBuffer[i]->reset();
-    
+
     return kNoError;
 }
 
@@ -74,14 +74,14 @@ Error_t CVibrato::setParam(VibratoParam_t eParam, float fParamValue)
         {
             m_afParam[kParamVibratoFreqInHz] = fParamValue;
             m_pCLfo->setLfoFreqInHz(fParamValue);
-        
+
         }
         break;
         case kParamVibratoWidthInSec:
         {
             m_pCLfo->setLfoWidthInSamples(fParamValue);
             for(int i = 0; i < m_iNumChannels; i++)
-                m_ppCRingBuffer[i]->setWriteIdx(m_ppCRingBuffer[i]->getWriteIdx() + int((fParamValue - m_afParam[kParamVibratoWidthInSec]) * m_fSampleRate));
+                m_ppCRingBuffer[i]->setWriteIdx(m_ppCRingBuffer[i]->getReadIdx() + int(fParamValue * m_fSampleRate));
             m_afParam[kParamVibratoWidthInSec] = fParamValue;
         }
         break;
@@ -114,7 +114,7 @@ bool CVibrato::isInParamRange(VibratoParam_t eParam, float fValue)
 
 Error_t CVibrato::process( float **ppfInputBuffer, float **ppfOutputBuffer, int iNumberOfFrames )
 {
-    
+
     for(int j = 0; j < iNumberOfFrames; j++)
     {
         float fLfoValue = m_pCLfo->getNextValue();
@@ -125,7 +125,6 @@ Error_t CVibrato::process( float **ppfInputBuffer, float **ppfOutputBuffer, int 
             m_ppCRingBuffer[i]->getPostInc();
         }
     }
-    
+
     return kNoError;
 }
-
