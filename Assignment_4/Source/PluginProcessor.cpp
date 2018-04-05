@@ -22,16 +22,12 @@ VibratoPluginAudioProcessor::VibratoPluginAudioProcessor()
                       #endif
                        .withOutput ("Output", AudioChannelSet::stereo(), true)
                      #endif
-                       ),
-        treeState(*this, nullptr)
+                       )
 #endif
 {
+    
     CVibrato::createInstance(pVibratoInstance);
     
-    NormalisableRange<float> widthRange (0.0F, 1.0F);
-    NormalisableRange<float> freqRange (0.0F, 50.0F);
-    treeState.createAndAddParameter(WIDTH_ID, WIDTH_NAME, WIDTH_NAME, widthRange, 0.0f, nullptr, nullptr);
-    treeState.createAndAddParameter(FREQ_ID, FREQ_NAME, FREQ_NAME, freqRange, 0.0f, nullptr, nullptr);
 }
 
 VibratoPluginAudioProcessor::~VibratoPluginAudioProcessor()

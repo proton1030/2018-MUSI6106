@@ -154,7 +154,7 @@
 					19455EF568A4D48E060B9E6C,
 					13E4486A7790C75572B18172,
 					DA756EEE32BC72C9C2C700EC,
-					529CCFD47974BDE1366A1D82, ); name = "Juce Modules"; sourceTree = "<group>"; };
+					529CCFD47974BDE1366A1D82, ); name = "JUCE Modules"; sourceTree = "<group>"; };
 		DF4952A2704EAAC0E0EDBC1F = {isa = PBXGroup; children = (
 					5849E3835186E3D54B38D823,
 					BA708C0E7BD82A45316F718C,
@@ -178,7 +178,7 @@
 					F800839F3321D7C6FEB783C3,
 					74820350F7985AB237E96AC2,
 					8C43D13599C17175EBA0C356,
-					0B85F1B299C6BDC420B7F52C, ); name = "Juce Library Code"; sourceTree = "<group>"; };
+					0B85F1B299C6BDC420B7F52C, ); name = "JUCE Library Code"; sourceTree = "<group>"; };
 		E0C527F57E791F2FBCBC4820 = {isa = PBXGroup; children = (
 					CFCE6E3BB1F28554DE7AECD0,
 					503CA836FF617C31C93ACF66,
@@ -699,7 +699,7 @@
 					AAD8D185717AB5CBF125414E, ); runOnlyForDeploymentPostprocessing = 0; };
 		1EA57500BEACC9C6F77D6AD2 = {isa = PBXNativeTarget; buildConfigurationList = 5A3CCFAAC037B6C0A29D253C; buildPhases = (
 					0FB190F7F6B9468CFF238688, ); buildRules = ( ); dependencies = (  ); name = "VibratoPlugin - Shared Code"; productName = VibratoPlugin; productReference = A2AEE8217C91362B22810249; productType = "com.apple.product-type.library.static"; };
-		157965761F6D7C8FE068909D = {isa = PBXProject; buildConfigurationList = E0A28F5D5D080A5D6DD56914; attributes = { LastUpgradeCheck = 0830; TargetAttributes = { 9878A35F03FF764621B55C5F = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; }; };8AB2E1F6B56A40B98F35B2BC = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; }; };94923EF4E23FDB7C2FC7B212 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; }; };95DE47CA5ADB885B0FE32CB8 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; }; };1EA57500BEACC9C6F77D6AD2 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; }; }; }; }; compatibilityVersion = "Xcode 3.2"; hasScannedForEncodings = 0; mainGroup = EFD232402B0F511BFF41C8FA; projectDirPath = ""; projectRoot = ""; targets = (9878A35F03FF764621B55C5F, 8AB2E1F6B56A40B98F35B2BC, 94923EF4E23FDB7C2FC7B212, 95DE47CA5ADB885B0FE32CB8, 1EA57500BEACC9C6F77D6AD2); };
+		157965761F6D7C8FE068909D = {isa = PBXProject; buildConfigurationList = E0A28F5D5D080A5D6DD56914; attributes = { LastUpgradeCheck = 0830; ORGANIZATIONNAME = ""; TargetAttributes = { 9878A35F03FF764621B55C5F = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; }; };8AB2E1F6B56A40B98F35B2BC = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; }; };94923EF4E23FDB7C2FC7B212 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; }; };95DE47CA5ADB885B0FE32CB8 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; }; };1EA57500BEACC9C6F77D6AD2 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; }; }; }; }; compatibilityVersion = "Xcode 3.2"; hasScannedForEncodings = 0; mainGroup = EFD232402B0F511BFF41C8FA; projectDirPath = ""; projectRoot = ""; targets = (9878A35F03FF764621B55C5F, 8AB2E1F6B56A40B98F35B2BC, 94923EF4E23FDB7C2FC7B212, 95DE47CA5ADB885B0FE32CB8, 1EA57500BEACC9C6F77D6AD2); };
 	};
 	rootObject = 157965761F6D7C8FE068909D;
 }

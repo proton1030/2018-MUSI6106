@@ -61,13 +61,15 @@ public:
     void setStateInformation (const void* data, int sizeInBytes) override;
     
     CVibrato *pVibratoInstance;
-    AudioProcessorValueTreeState treeState;
+    
 private:
     const float fDefaultMaxModWidthInS = 1.0f;
     const float fDefaultModWidthInS = 0.0f;
     const float fDefaultModFreqInHz = 0.0f;
+    
+    float   **ppfAudioData;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (VibratoPluginAudioProcessor)
 
-    float   **ppfAudioData;
+    
 };

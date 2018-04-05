@@ -18,15 +18,15 @@ VibratoPluginAudioProcessorEditor::VibratoPluginAudioProcessorEditor (VibratoPlu
 {
     addAndMakeVisible(pSliderVibratoWidth = new Slider ("Width"));
     pSliderVibratoWidth->setSliderStyle (Slider::RotaryHorizontalVerticalDrag);
+    pSliderVibratoWidth->setRange (0.0, 1.0, 0.01);
     pSliderVibratoWidth->setTextBoxStyle (Slider::TextBoxBelow, true, 100, 20);
-    pSliderVibratoWidth->setSkewFactorFromMidPoint(0.1);
     pSliderVibratoWidth->setColour(Slider::textBoxOutlineColourId, Colours::darkgrey);
     pSliderVibratoWidth->addListener(this);
     
     addAndMakeVisible(pSliderVibratoFreq = new Slider ("Freq"));
     pSliderVibratoFreq->setSliderStyle (Slider::RotaryHorizontalVerticalDrag);
+    pSliderVibratoWidth->setRange (0.0, 100.0, 0.01);
     pSliderVibratoFreq->setTextBoxStyle (Slider::TextBoxBelow, true, 100, 20);
-    pSliderVibratoFreq->setSkewFactorFromMidPoint(50.0);
     pSliderVibratoFreq->setColour(Slider::textBoxOutlineColourId, Colours::darkgrey);
     pSliderVibratoFreq->addListener(this);
     
@@ -47,17 +47,13 @@ VibratoPluginAudioProcessorEditor::VibratoPluginAudioProcessorEditor (VibratoPlu
     addAndMakeVisible (pButtonBypass = new TextButton ("Bypass"));
     pButtonBypass->addListener (this);
     
-    pWidthAttachment = new AudioProcessorValueTreeState::SliderAttachment (processor.treeState, WIDTH_ID, *pSliderVibratoWidth);
-    pFreqAttachment = new AudioProcessorValueTreeState::SliderAttachment (processor.treeState, FREQ_ID, *pSliderVibratoFreq);
     
     setSize (400, 300);
 }
 
 VibratoPluginAudioProcessorEditor::~VibratoPluginAudioProcessorEditor()
 {
-    pSliderVibratoFreq = nullptr;
-    pSliderVibratoWidth = nullptr;
-    pButtonBypass = nullptr;
+    
 }
 
 //==============================================================================

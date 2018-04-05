@@ -22,13 +22,10 @@ class VibratoPluginAudioProcessorEditor  : public AudioProcessorEditor, public S
 public:
     VibratoPluginAudioProcessorEditor (VibratoPluginAudioProcessor&);
     ~VibratoPluginAudioProcessorEditor();
-
     //==============================================================================
     void paint (Graphics&) override;
     void resized() override;
     
-    ScopedPointer<AudioProcessorValueTreeState::SliderAttachment> pWidthAttachment, pFreqAttachment;
-
 private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
@@ -36,7 +33,7 @@ private:
     ScopedPointer<Slider> pSliderVibratoWidth, pSliderVibratoFreq;
     ScopedPointer<TextButton> pButtonBypass;
     ScopedPointer<Label> pLabelVibratoWidth, pLabelVibratoFreq;
-    
+
     void buttonClicked (Button* buttonThatWasClicked) override;
     void buttonStateChanged(Button* buttonThatWasClicked) override;
     void sliderValueChanged (Slider* slider) override;

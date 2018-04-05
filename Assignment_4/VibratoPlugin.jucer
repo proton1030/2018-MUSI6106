@@ -11,7 +11,7 @@
               pluginProducesMidiOut="0" pluginIsMidiEffectPlugin="0" pluginEditorRequiresKeys="0"
               pluginAUExportPrefix="VibratoPluginAU" pluginRTASCategory=""
               aaxIdentifier="com.yourcompany.VibratoPlugin" pluginAAXCategory="AAX_ePlugInCategory_Dynamics"
-              jucerVersion="5.2.0">
+              jucerVersion="5.3.0">
   <MAINGROUP id="HpCRgp" name="VibratoPlugin">
     <GROUP id="{B413FF5A-692B-0D5F-F4E9-17063AA98418}" name="Source">
       <FILE id="AyVlYO" name="Vibrato.cpp" compile="1" resource="0" file="Source/Vibrato.cpp"/>
